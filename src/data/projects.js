@@ -38,19 +38,21 @@ export const projects = [
   title: "Store Management API",
   category: ".NET · Backend Development",
   description:
-    "A RESTful API for managing store products and categories, built with ASP.NET Core.",
+    "A RESTful API for managing store products and categories, with JWT authentication and role-based authorization.",
   details:
-    "A backend project built with C# and ASP.NET Core Web API. It uses Entity Framework Core for database access, SQL Server for data storage, and JWT and ASP.NET Core Identity packages for authentication.",
+    "A backend project built with C# and ASP.NET Core Web API. It provides full CRUD for products and categories, user registration and login with ASP.NET Core Identity, and JWT bearer authentication with role-based authorization (Admin/User). It uses Entity Framework Core with PostgreSQL, is documented with Swagger/OpenAPI, and is containerized with Docker and deployed on Render.",
   tech: [
     "C#",
     "ASP.NET Core Web API",
     "Entity Framework Core",
-    "SQL Server",
+    "PostgreSQL",
     "JWT",
-    "ASP.NET Core Identity"
+    "ASP.NET Core Identity",
+    "Swagger",
+    "Docker"
   ],
   icon: "store",
-  demo: "",
+  demo: "https://store-management-1-7wrw.onrender.com/swagger/index.html",
   github: "https://github.com/aqdarahmad/Store-Management",
 },
  
