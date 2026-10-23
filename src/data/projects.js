@@ -77,4 +77,26 @@ export const projects = [
     demo: "",
     github: "",
   },
+  {
+    id: 5,
+    title: "GitHub RAG Chatbot",
+    category: "AI · RAG · FastAPI",
+    description:
+      "A RAG chatbot that answers questions about the FastAPI documentation using semantic search and Google Gemini.",
+    details:
+      "A Retrieval-Augmented Generation chatbot with a FastAPI backend and a React + Vite frontend. Documentation is split into markdown-aware chunks, embedded with MiniLM on ONNX Runtime, and stored in ChromaDB. For each question, the most relevant chunks are retrieved and sent to Google Gemini to generate the answer. It includes per-IP rate limiting, input validation, API tests with pytest, and is containerized with Docker and deployed on Render.",
+    tech: [
+      "Python",
+      "FastAPI",
+      "ChromaDB",
+      "Google Gemini",
+      "ONNX Runtime",
+      "React",
+      "Vite",
+      "Docker",
+    ],
+    icon: "chat",
+    demo: "https://github-rag-chatbot.onrender.com",
+    github: "https://github.com/aqdarahmad/github-rag-chatbot",
+  },
 ];
