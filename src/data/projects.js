@@ -25,13 +25,21 @@ export const projects = [
     title: "Booking System API",
     category: ".NET · C# · SQL",
     description:
-      "A RESTful booking system API with authentication, database integration, and ticket management.",
+      "A RESTful booking and ticket management API with JWT authentication and role-based access control.",
     details:
-      "A backend project built with ASP.NET Core and Entity Framework Core, with API endpoints for managing bookings, tickets, and related data.",
-    tech: ["C#", "ASP.NET Core", "Entity Framework Core", "SQL Server", "JWT"],
+      "A backend project built with ASP.NET Core and Entity Framework Core that lets authenticated users book trips and view their tickets, while an Admin manages tickets and flights. It uses ASP.NET Core Identity with JWT for authentication, Admin/User roles for authorization, and ownership checks so users can only access their own bookings and tickets. Data is stored in PostgreSQL and the API is documented with Swagger.",
+    tech: [
+      "C#",
+      "ASP.NET Core Web API",
+      "Entity Framework Core",
+      "PostgreSQL",
+      "JWT",
+      "ASP.NET Core Identity",
+      "Swagger",
+    ],
     icon: "booking",
     demo: "",
-    github: "",
+    github: "https://github.com/aqdarahmad/booking-system-api",
   },
  {
   id: 3,
