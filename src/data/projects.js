@@ -73,4 +73,17 @@ export const projects = [
     demo: "https://github-rag-chatbot.onrender.com",
     github: "https://github.com/aqdarahmad/github-rag-chatbot",
   },
+  {
+    id: 4,
+    title: "Problem Solving",
+    category: "C++ · Algorithms · LeetCode",
+    description:
+      "110 C++ solutions from contest training sheets and LeetCode, focused on data structures and algorithmic thinking.",
+    details:
+      "A collection of 110 problems solved in C++. It includes 75 problems from the Assiut training sheets covering data types and conditions, loops, arrays, and strings, plus 35 LeetCode problems from the Blind 75 list covering trees, linked lists, dynamic programming, graphs, and sliding window techniques.",
+    tech: ["C++", "Data Structures", "Algorithms", "LeetCode"],
+    icon: "code",
+    demo: "",
+    github: "https://github.com/aqdarahmad/competitive-programming",
+  },
 ];
