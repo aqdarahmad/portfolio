@@ -9,19 +9,6 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "Fabric Type Detection API",
-    category: "AI · FastAPI · Gemini",
-    description:
-      "An AI-powered API that detects fabric types from images and provides characteristics and care tips.",
-    details:
-      "A fabric detection API built with FastAPI and Google Gemini Vision. It analyzes uploaded images and returns the predicted fabric type, confidence level, characteristics, and care recommendations.",
-    tech: ["Python", "FastAPI", "Google Gemini", "REST API"],
-    icon: "fabric",
-    demo: "",
-    github: "",
-  },
-  {
-    id: 2,
     title: "Booking System API",
     category: ".NET · C# · SQL",
     description:
@@ -41,8 +28,8 @@ export const projects = [
     demo: "",
     github: "https://github.com/aqdarahmad/booking-system-api",
   },
- {
-  id: 3,
+  {
+  id: 2,
   title: "Store Management API",
   category: ".NET · Backend Development",
   description:
@@ -65,20 +52,7 @@ export const projects = [
 },
  
   {
-    id: 4,
-    title: "Problem Solving",
-    category: "C++ · Algorithms",
-    description:
-      "Programming exercises focused on data structures and algorithmic thinking.",
-    details:
-      "A collection of programming challenges covering arrays, strings, maps, algorithms, and data structures.",
-    tech: ["C++", "Data Structures", "Algorithms"],
-    icon: "code",
-    demo: "",
-    github: "",
-  },
-  {
-    id: 5,
+    id: 3,
     title: "GitHub RAG Chatbot",
     category: "AI · RAG · FastAPI",
     description:
