@@ -128,7 +128,7 @@ export const projects = [
       "JWT",
     ],
     icon: "booking",
-    demo: "",
+    demo: "https://quiz-loom.onrender.com",
     github: "https://github.com/aqdarahmad/Quiz-Loom",
   },
 ];
