@@ -75,6 +75,29 @@ export const projects = [
   },
   {
     id: 4,
+    title: "Semantic Job Matching Tool",
+    category: "AI · Semantic Search · FastAPI",
+    description:
+      "An AI-powered tool that analyzes a PDF resume and recommends the most relevant jobs using semantic search and skill matching.",
+    details:
+      "A full-stack project with a FastAPI backend and a React + Vite frontend. It extracts text and skills from an uploaded resume, creates embeddings with all-MiniLM-L6-v2 on ONNX Runtime, and ranks jobs with a hybrid score that combines pgvector semantic similarity and skill matching. Google Gemini then evaluates the top matches with strengths, missing skills, and recommendations. It includes rate limiting, automatic database setup, and is containerized with Docker and deployed on Render with a Neon PostgreSQL database.",
+    tech: [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "pgvector",
+      "ONNX Runtime",
+      "Google Gemini",
+      "React",
+      "Vite",
+      "Docker",
+    ],
+    icon: "search",
+    demo: "https://semantic-search-tool.onrender.com",
+    github: "https://github.com/aqdarahmad/semantic-search-tool",
+  },
+  {
+    id: 5,
     title: "Problem Solving",
     category: "C++ · Algorithms · LeetCode",
     description:
