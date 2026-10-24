@@ -1,5 +1,6 @@
 import { ArrowUpRight, Mail } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import portrait from "../assets/aqdar.jpg";
 
 export default function Hero() {
   return (
@@ -41,11 +42,13 @@ export default function Hero() {
 
       <div className="hero-visual">
         <div className="portrait-shape">
-          <div className="portrait-placeholder">
-            <div className="portrait-initials">AA</div>
-            <span>Your photo goes here</span>
-            <small>Replace with your own picture</small>
-          </div>
+          <img
+            className="portrait-photo"
+            src={portrait}
+            alt="Aqdar Ahmad"
+            width="820"
+            height="878"
+          />
         </div>
         <span className="doodle doodle-crown">♕</span>
         <span className="doodle doodle-heart">♡</span>
