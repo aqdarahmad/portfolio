@@ -93,7 +93,7 @@ export const projects = [
       "Docker",
     ],
     icon: "search",
-    demo: "https://semantic-search-tool.onrender.com/jobs",
+    demo: "https://semantic-search-tool.onrender.com/resume",
     github: "https://github.com/aqdarahmad/semantic-search-tool",
   },
   {
