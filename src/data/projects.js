@@ -25,7 +25,7 @@ export const projects = [
       "Swagger",
     ],
     icon: "booking",
-    demo: "",
+    demo: "https://booking-system-api-r3tp.onrender.com/swagger/index.html",
     github: "https://github.com/aqdarahmad/booking-system-api",
   },
   {
@@ -93,7 +93,7 @@ export const projects = [
       "Docker",
     ],
     icon: "search",
-    demo: "https://semantic-search-tool.onrender.com",
+    demo: "https://semantic-search-tool.onrender.com/jobs",
     github: "https://github.com/aqdarahmad/semantic-search-tool",
   },
   {
