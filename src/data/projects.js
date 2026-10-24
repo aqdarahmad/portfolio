@@ -109,4 +109,26 @@ export const projects = [
     demo: "",
     github: "https://github.com/aqdarahmad/competitive-programming",
   },
+  {
+    id: 6,
+    title: "QuizLoom",
+    category: "Full-Stack · React · Node.js",
+    description:
+      "A full-stack quiz platform where students take timed quizzes and track their history, and admins manage categories, questions and student performance.",
+    details:
+      "A React + Vite frontend with Material UI and Redux Toolkit, backed by an Express REST API and a PostgreSQL (Neon) database. It has real sign-up and login with bcrypt-hashed passwords and JWT, role-based access for students and admins, randomized timed quizzes scored on the server, quiz history with statistics, and an admin dashboard with charts, a question bank editor and student management. Deployed as a single service on Render.",
+    tech: [
+      "React",
+      "Vite",
+      "Material UI",
+      "Redux Toolkit",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "JWT",
+    ],
+    icon: "booking",
+    demo: "",
+    github: "https://github.com/aqdarahmad/Quiz-Loom",
+  },
 ];
