@@ -46,8 +46,8 @@ export default function Hero() {
             className="portrait-photo"
             src={portrait}
             alt="Aqdar Ahmad"
-            width="820"
-            height="878"
+            width="900"
+            height="1200"
           />
         </div>
         <span className="doodle doodle-crown">♕</span>
