@@ -25,11 +25,11 @@ export const projects = [
     description:
       "An AI-based fabric inspection system that detects holes, stains and tears, with a Flutter mobile app connected to a Raspberry Pi 4 camera.",
     details:
-      "My senior graduation project. A YOLOv8 model trained on a custom fabric defect dataset to find holes, stains and tears, reaching 85.1% mAP@50, 86.8% precision and 81.7% F1-score. The dataset was prepared with Roboflow and the model was trained on Google Colab. A Flutter mobile app connects to a Raspberry Pi 4 camera pipeline so fabric can be inspected in real time.",
+      "My senior graduation project. A YOLOv8 model trained on a custom fabric defect dataset to find holes, stains and tears, reaching 85.1% mAP@50, 86.8% precision and 81.7% F1-score. The dataset was prepared with Roboflow and the model was trained on Google Colab. The repository contains the Flutter mobile app, which connects to a Raspberry Pi 4 camera pipeline so fabric can be inspected in real time.",
     tech: ["YOLOv8", "Computer Vision", "Flutter", "Raspberry Pi 4", "Roboflow", "Google Colab"],
     icon: "fabric",
     demo: "",
-    github: "",
+    github: "https://github.com/aqdarahmad/Fabric-AI",
   },
   {
     id: 1,
