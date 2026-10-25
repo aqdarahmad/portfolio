@@ -39,6 +39,19 @@ export default function ProjectModal({ project, onClose }) {
         <h2>{project.title}</h2>
         <p className="modal-details">{project.details}</p>
 
+        {project.gallery?.length > 0 && (
+          <ul className="gallery" aria-label="Project images">
+            {project.gallery.map((img) => (
+              <li key={img.src}>
+                <a href={img.src} target="_blank" rel="noreferrer">
+                  <img src={img.src} alt={img.caption} loading="lazy" width="596" height="335" />
+                </a>
+                <span>{img.caption}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
         <ul className="tech-tags" aria-label="Technologies used">
           {project.tech.map((tech) => (
             <li key={tech}>{tech}</li>
