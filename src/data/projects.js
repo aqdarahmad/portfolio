@@ -28,7 +28,7 @@ export const projects = [
       "My senior graduation project, built with a team of three. People buying fabric often cannot tell the material, find defects by eye, or find the same fabric again, and online listings can be misleading. Fabric AI takes a photo from the phone or from a Raspberry Pi 4 camera with a ring light, sends it to a YOLOv8 model hosted on Roboflow, and shows the defect type, the fabric type and a quality score in the app, with reports that can be saved. The model was trained on a custom defect dataset (holes, stains and tears) and reached 85.1% mAP@50, 86.8% precision and 81.7% F1-score. The Flutter app uses Firebase for sign-in and stores every inspection.",
     tech: ["YOLOv8", "Computer Vision", "Flutter", "Firebase", "Raspberry Pi 4", "Roboflow", "Google Colab"],
     icon: "fabric",
-    demo: "",
+    demo: "https://fabric-ai-py95.onrender.com",
     github: "https://github.com/aqdarahmad/Fabric-AI",
     gallery: [
       { src: "/fabric/system-design.png", caption: "How a photo becomes a result: app or Raspberry Pi, Roboflow YOLOv8 server, Firebase, results screen" },
