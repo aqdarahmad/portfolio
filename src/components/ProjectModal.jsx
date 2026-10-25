@@ -1,8 +1,21 @@
+import { useEffect, useRef } from "react";
 import { ExternalLink, X } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
-import ProjectPreview from "./ProjectPreview";
 
 export default function ProjectModal({ project, onClose }) {
+  const closeRef = useRef(null);
+
+  useEffect(() => {
+    closeRef.current?.focus();
+    const onKey = (e) => e.key === "Escape" && onClose();
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [onClose]);
+
   return (
     <div className="modal-backdrop" onClick={onClose}>
       <section
@@ -13,44 +26,35 @@ export default function ProjectModal({ project, onClose }) {
         onClick={(event) => event.stopPropagation()}
       >
         <button
+          ref={closeRef}
           type="button"
           className="modal-close"
           onClick={onClose}
           aria-label="Close project details"
         >
-          <X />
+          <X size={20} />
         </button>
 
-        <span className="section-kicker">Project Details</span>
-        <ProjectPreview type={project.icon} />
-        <span className="project-category">{project.category}</span>
+        <p className="modal-kind">{project.category}</p>
         <h2>{project.title}</h2>
-        <p>{project.details}</p>
-        <h3>Technologies Used</h3>
+        <p className="modal-details">{project.details}</p>
 
-        <div className="tech-tags">
-          {project.tech.map((tech) => <span key={tech}>{tech}</span>)}
-        </div>
+        <ul className="tech-tags" aria-label="Technologies used">
+          {project.tech.map((tech) => (
+            <li key={tech}>{tech}</li>
+          ))}
+        </ul>
 
         <div className="modal-actions">
-          {project.demo ? (
-            <a className="button button-pink" href={project.demo} target="_blank" rel="noreferrer">
-              Live Demo <ExternalLink size={15} />
+          {project.demo && (
+            <a className="button button-solid" href={project.demo} target="_blank" rel="noreferrer">
+              Live demo <ExternalLink size={16} />
             </a>
-          ) : (
-            <span className="button button-pink disabled-button">
-              Live Demo — Add link
-            </span>
           )}
-
-          {project.github ? (
-            <a className="button button-outline" href={project.github} target="_blank" rel="noreferrer">
-              <FaGithub size={16} /> GitHub
+          {project.github && (
+            <a className="button button-ghost" href={project.github} target="_blank" rel="noreferrer">
+              <FaGithub size={17} /> Source code
             </a>
-          ) : (
-            <span className="button button-outline disabled-button">
-              GitHub — Add link
-            </span>
           )}
         </div>
       </section>

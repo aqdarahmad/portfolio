@@ -1,44 +1,50 @@
-
 :root {
-  font-family: 'Poppins', sans-serif;
+  --blush: #fff0f5;
+  --petal: #ffd3e4;
+  --rose: #e0407f;
+  --rose-deep: #a8195a;
+  --plum: #3a1030;
+  --plum-soft: #6b3a5b;
+  --gold: #c9962b;
+  --gold-soft: #f2d58a;
+  --white: #ffffff;
+  --surface: #ffffff;
+  --line: rgba(201, 150, 43, .45);
+
+  --font-display: "Instrument Serif", "Times New Roman", serif;
+  --font-body: "Figtree Variable", system-ui, sans-serif;
+
+  font-family: var(--font-body);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  background: #ffffff;
-  color: #202027;
+  color: var(--plum);
+  background: var(--blush);
+  scroll-behavior: smooth;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background: var(--blush);
 }
 
-button,
-input,
-textarea {
-  font: inherit;
+button, input, textarea { font: inherit; }
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+ul, dl, dd { margin: 0; padding: 0; list-style: none; }
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
 }
 
-button:focus-visible,
-a:focus-visible {
-  outline: 2px solid #f34f9b;
-  outline-offset: 4px;
-}
+::selection { background: var(--gold-soft); color: var(--plum); }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
-::selection {
-  background: #ffd6e9;
-  color: #30202a;
+@media (prefers-reduced-motion: reduce) {
+  :root { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }

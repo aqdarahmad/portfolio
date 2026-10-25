@@ -1,42 +1,36 @@
 import { ArrowUpRight } from "lucide-react";
-import ProjectPreview from "./ProjectPreview";
 
 export default function Projects({ projects, onSelectProject }) {
   return (
-    <section className="projects-section section-wrap" id="projects">
-      <div className="projects-heading-row">
-        <div>
-          <span className="section-kicker">My Projects</span>
-          <h2 className="section-heading">
-            Featured <span>Projects</span>
-          </h2>
-        </div>
-        <a className="view-all" href="#projects">
-          Explore Projects <ArrowUpRight size={16} />
-        </a>
-      </div>
+    <section className="projects" id="projects">
+      <h2 className="section-title">Selected projects</h2>
 
-      <div className="projects-grid">
+      <ul className="project-list">
         {projects.map((project) => (
-          <button
-            type="button"
-            className="project-card"
-            key={project.id}
-            onClick={() => onSelectProject(project)}
-            aria-label={`View details for ${project.title}`}
-          >
-            <ProjectPreview type={project.icon} />
-            <div className="project-card-content">
-              <span className="project-category">{project.category}</span>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <span className="project-link">
-                View Project <ArrowUpRight size={15} />
+          <li key={project.id}>
+            <button
+              type="button"
+              className="project-row"
+              onClick={() => onSelectProject(project)}
+              aria-label={`Open details for ${project.title}`}
+            >
+              <span className="project-kind">{project.category}</span>
+              <span className="project-main">
+                <span className="project-title">{project.title}</span>
+                <span className="project-desc">{project.description}</span>
+                <span className="project-tags">
+                  {project.tech.slice(0, 4).map((t) => (
+                    <span key={t}>{t}</span>
+                  ))}
+                </span>
               </span>
-            </div>
-          </button>
+              <span className="project-arrow" aria-hidden="true">
+                <ArrowUpRight size={26} />
+              </span>
+            </button>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

@@ -1,16 +1,27 @@
-export const skills = [
-  
-  "C++",
-  "C#",
-  "ASP.NET Core",
-  "Git",
+export const skillGroups = [
+  {
+    name: "Backend",
+    items: ["C#", "ASP.NET Core", "Entity Framework Core", "Python", "FastAPI", "Node.js", "Express", "JWT"],
+  },
+  {
+    name: "Frontend",
+    items: ["React", "Vite", "Material UI", "Redux Toolkit"],
+  },
+  {
+    name: "Data and AI",
+    items: ["PostgreSQL", "pgvector", "ChromaDB", "Google Gemini", "Semantic search"],
+  },
+  {
+    name: "Tools and foundations",
+    items: ["Git", "Docker", "Swagger", "C++", "Data structures", "Algorithms"],
+  },
 ];
 
 export const projects = [
   {
     id: 1,
     title: "Booking System API",
-    category: ".NET · C# · SQL",
+    category: "Backend API",
     description:
       "A RESTful booking and ticket management API with JWT authentication and role-based access control.",
     details:
@@ -31,7 +42,7 @@ export const projects = [
   {
   id: 2,
   title: "Store Management API",
-  category: ".NET · Backend Development",
+  category: "Backend API",
   description:
     "A RESTful API for managing store products and categories, with JWT authentication and role-based authorization.",
   details:
@@ -54,7 +65,7 @@ export const projects = [
   {
     id: 3,
     title: "GitHub RAG Chatbot",
-    category: "AI · RAG · FastAPI",
+    category: "AI chatbot",
     description:
       "A RAG chatbot that answers questions about the FastAPI documentation using semantic search and Google Gemini.",
     details:
@@ -76,7 +87,7 @@ export const projects = [
   {
     id: 4,
     title: "Semantic Job Matching Tool",
-    category: "AI · Semantic Search · FastAPI",
+    category: "AI web app",
     description:
       "An AI-powered tool that analyzes a PDF resume and recommends the most relevant jobs using semantic search and skill matching.",
     details:
@@ -99,7 +110,7 @@ export const projects = [
   {
     id: 5,
     title: "Problem Solving",
-    category: "C++ · Algorithms · LeetCode",
+    category: "Algorithms",
     description:
       "110 C++ solutions from contest training sheets and LeetCode, focused on data structures and algorithmic thinking.",
     details:
@@ -112,7 +123,7 @@ export const projects = [
   {
     id: 6,
     title: "QuizLoom",
-    category: "Full-Stack · React · Node.js",
+    category: "Full-stack web app",
     description:
       "A full-stack quiz platform where students take timed quizzes and track their history, and admins manage categories, questions and student performance.",
     details:
