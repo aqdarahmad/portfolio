@@ -5,11 +5,11 @@ export const skillGroups = [
   },
   {
     name: "Frontend",
-    items: ["React", "Vite", "Material UI", "Redux Toolkit"],
+    items: ["React", "Vite", "Material UI", "Redux Toolkit", "Flutter"],
   },
   {
     name: "Data and AI",
-    items: ["PostgreSQL", "pgvector", "ChromaDB", "Google Gemini", "Semantic search"],
+    items: ["YOLOv8", "Computer vision", "PostgreSQL", "pgvector", "ChromaDB", "Google Gemini", "Semantic search"],
   },
   {
     name: "Tools and foundations",
@@ -18,6 +18,19 @@ export const skillGroups = [
 ];
 
 export const projects = [
+  {
+    id: 7,
+    title: "Fabric Defect Detection System",
+    category: "Computer vision, graduation project",
+    description:
+      "An AI-based fabric inspection system that detects holes, stains and tears, with a Flutter mobile app connected to a Raspberry Pi 4 camera.",
+    details:
+      "My senior graduation project. A YOLOv8 model trained on a custom fabric defect dataset to find holes, stains and tears, reaching 85.1% mAP@50, 86.8% precision and 81.7% F1-score. The dataset was prepared with Roboflow and the model was trained on Google Colab. A Flutter mobile app connects to a Raspberry Pi 4 camera pipeline so fabric can be inspected in real time.",
+    tech: ["YOLOv8", "Computer Vision", "Flutter", "Raspberry Pi 4", "Roboflow", "Google Colab"],
+    icon: "fabric",
+    demo: "",
+    github: "",
+  },
   {
     id: 1,
     title: "Booking System API",
