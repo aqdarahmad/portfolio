@@ -1,5 +1,5 @@
-import { Mail } from "lucide-react";
-import { FaGithub } from "react-icons/fa6";
+import { Download, Mail } from "lucide-react";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 
 export default function Contact() {
   return (
@@ -16,6 +16,17 @@ export default function Contact() {
           rel="noreferrer"
         >
           <FaGithub size={18} /> GitHub
+        </a>
+        <a
+          className="button button-ghost"
+          href="https://www.linkedin.com/in/aqdar-ahmad-b30832421"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaLinkedinIn size={18} /> LinkedIn
+        </a>
+        <a className="button button-ghost" href="/Aqdar_Ahmad_CV.pdf" download>
+          <Download size={18} /> Download CV
         </a>
       </div>
     </section>

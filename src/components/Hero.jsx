@@ -1,5 +1,5 @@
 import { ArrowDownRight, Mail } from "lucide-react";
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import portrait from "../assets/aqdar.jpg";
 
 export default function Hero() {
@@ -41,6 +41,15 @@ export default function Hero() {
             aria-label="Aqdar on GitHub"
           >
             <FaGithub size={22} />
+          </a>
+          <a
+            className="icon-link"
+            href="https://www.linkedin.com/in/aqdar-ahmad-b30832421"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Aqdar on LinkedIn"
+          >
+            <FaLinkedinIn size={22} />
           </a>
         </div>
       </div>

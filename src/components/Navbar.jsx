@@ -1,4 +1,4 @@
-import { Moon, Sun } from "lucide-react";
+import { Download, Moon, Sun } from "lucide-react";
 
 export default function Navbar({ darkMode, onToggleTheme }) {
   return (
@@ -13,6 +13,10 @@ export default function Navbar({ darkMode, onToggleTheme }) {
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
+
+      <a className="cv-pill" href="/Aqdar_Ahmad_CV.pdf" download>
+        <Download size={15} aria-hidden="true" /> CV
+      </a>
 
       <button
         type="button"

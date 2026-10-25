@@ -86,6 +86,20 @@
 }
 .navbar nav a:hover { background-size: 100% 2px; }
 
+.cv-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--rose-deep);
+  color: #fff;
+  font-weight: 650;
+  text-decoration: none;
+}
+.cv-pill:hover { background: var(--rose); }
+.portfolio.dark-mode .cv-pill { background: var(--gold-soft); color: var(--plum); }
+
 .theme-toggle {
   display: grid;
   place-items: center;
@@ -416,6 +430,7 @@
 
 @media (max-width: 560px) {
   .navbar nav { gap: 12px; font-size: .92rem; }
+  .cv-pill { display: none; }
   .brand { font-size: 1.35rem; }
   .button { padding: 13px 20px; }
 }
