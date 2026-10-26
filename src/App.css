@@ -253,36 +253,97 @@
 .project-list { border-top: 2px solid var(--gold); }
 .project-list li { border-bottom: 1px solid var(--line); }
 
-.project-row {
-  width: 100%;
+.project-card {
   display: grid;
-  grid-template-columns: 170px minmax(0, 1fr) 48px;
-  gap: 24px;
-  align-items: start;
-  padding: 30px 12px;
+  grid-template-columns: minmax(0, 400px) minmax(0, 1fr);
+  gap: clamp(20px, 3.5vw, 44px);
+  align-items: center;
+  padding: 34px 0;
+}
+
+.project-thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid var(--gold);
+  border-radius: 20px;
+  background: var(--petal);
+  cursor: pointer;
+  box-shadow: 8px 8px 0 var(--petal);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform .5s ease;
+}
+.project-thumb:hover,
+.project-thumb:focus-visible { transform: translate(-3px, -3px); box-shadow: 12px 12px 0 var(--gold-soft); }
+.project-thumb:hover img { transform: scale(1.05); }
+
+.thumb-badge {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--plum);
+  color: var(--white);
+  font-size: .9rem;
+  font-weight: 650;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+.project-thumb:hover .thumb-badge,
+.project-thumb:focus-visible .thumb-badge { opacity: 1; transform: none; }
+@media (hover: none) { .thumb-badge { opacity: 1; transform: none; } }
+
+.cover-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 10px;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255, 255, 255, .55), transparent 45%),
+    linear-gradient(135deg, var(--petal), var(--gold-soft));
+  color: var(--rose-deep);
+}
+.cover-initials { font-family: var(--font-display); font-size: clamp(3.4rem, 8vw, 5.4rem); line-height: 1; }
+.cover-label { font-size: .85rem; font-weight: 650; letter-spacing: .04em; color: var(--plum-soft); padding-inline: 12px; text-align: center; }
+
+.project-info {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+  padding: 0;
   background: transparent;
   border: 0;
   color: inherit;
   text-align: left;
   cursor: pointer;
-  transition: background-color .25s ease, padding .25s ease;
 }
-.project-row:hover { background: var(--bg-alt); padding-inline: 24px; }
-.project-row:hover .project-arrow { transform: rotate(45deg); background: var(--gold); color: var(--plum); }
-
-.project-kind {
-  padding-top: 12px;
-  font-weight: 600;
-  color: var(--accent);
-}
-.project-main { display: grid; gap: 10px; }
+.project-kind { font-weight: 600; color: var(--accent); }
 .project-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(2rem, 3.6vw, 3rem);
   line-height: 1.05;
+  transition: color .2s ease;
 }
+.project-info:hover .project-title { color: var(--rose-deep); }
 .project-desc { color: var(--ink-soft); line-height: 1.6; max-width: 62ch; }
-.project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
 .project-tags span {
   padding: 4px 12px;
   border-radius: 999px;
@@ -290,17 +351,17 @@
   font-size: .85rem;
   font-weight: 550;
 }
-.project-row:hover .project-tags span { background: var(--surface); color: var(--plum); }
-.project-arrow {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
+.project-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   margin-top: 6px;
-  border-radius: 50%;
-  border: 2px solid var(--gold);
-  transition: transform .25s ease, background-color .25s ease;
+  font-weight: 650;
+  color: var(--rose-deep);
+  border-bottom: 2px solid var(--gold);
 }
+.project-info:hover .project-more svg { transform: rotate(45deg); }
+.project-more svg { transition: transform .25s ease; }
 
 /* ---------- Skills ---------- */
 .skills {
@@ -438,10 +499,7 @@
     row-gap: 36px;
   }
   .hero-portrait { justify-self: center; width: min(78%, 360px); margin-right: 18px; }
-  .project-row { grid-template-columns: minmax(0, 1fr) 44px; }
-  .project-kind { grid-column: 1 / -1; padding-top: 0; }
-  .project-arrow { grid-column: 2; grid-row: 2; width: 44px; height: 44px; }
-  .project-main { grid-column: 1; grid-row: 2; }
+  .project-card { grid-template-columns: minmax(0, 1fr); gap: 22px; }
   .skill-group { grid-template-columns: 1fr; gap: 12px; }
 }
 
