@@ -175,4 +175,17 @@ export const projects = [
     demo: "https://quiz-loom.onrender.com",
     github: "https://github.com/aqdarahmad/Quiz-Loom",
   },
+  {
+    id: 8,
+    title: "Lost & Found App",
+    category: "Mobile app",
+    description:
+      "A Flutter app where people post lost and found items, comment, like and save posts, and manage their own profile.",
+    details:
+      "A social-style mobile app built with Flutter and Firebase to help people recover lost items. Users sign up and sign in with Firebase Authentication, publish posts with a photo, like and comment on posts, save posts for later, search, and open other users' profiles. Each user has an editable profile and a page with their own posts that they can edit or delete. The settings area covers changing the password, reporting a problem and contacting support. Data is stored in Cloud Firestore (users, posts, comments, likes and saved posts).",
+    tech: ["Flutter", "Dart", "Firebase Auth", "Cloud Firestore"],
+    icon: "search",
+    demo: "",
+    github: "https://github.com/aqdarahmad/lose-found2-master",
+  },
 ];

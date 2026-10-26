@@ -58,6 +58,7 @@ Every project opens in a modal with the full story, tech stack, links and, where
 | [GitHub RAG Chatbot](https://github.com/aqdarahmad/github-rag-chatbot) | Chat with any GitHub repository | Python, FastAPI, ChromaDB, Gemini |
 | [Semantic Job Matching Tool](https://github.com/aqdarahmad/semantic-search-tool) | Matches a candidate profile to jobs by meaning | Python, pgvector, Gemini |
 | [QuizLoom](https://github.com/aqdarahmad/Quiz-Loom) | Quiz platform with student and admin dashboards | React, Express, PostgreSQL |
+| [Lost & Found App](https://github.com/aqdarahmad/lose-found2-master) | Mobile app to post, comment on and save lost and found items | Flutter, Firebase, Firestore |
 | [Problem Solving](https://github.com/aqdarahmad/competitive-programming) | Algorithms and data structures practice | C++ |
 
 ## Tech stack
