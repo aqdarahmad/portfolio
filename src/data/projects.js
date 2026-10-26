@@ -63,6 +63,7 @@ export const projects = [
       "Swagger",
     ],
     icon: "booking",
+    cover: "/projects/booking-api.jpg",
     demo: "https://booking-system-api-r3tp.onrender.com/swagger/index.html",
     github: "https://github.com/aqdarahmad/booking-system-api",
   },
@@ -85,6 +86,7 @@ export const projects = [
     "Docker"
   ],
   icon: "store",
+  cover: "/projects/store-api.jpg",
   demo: "https://store-management-1-7wrw.onrender.com/swagger/index.html",
   github: "https://github.com/aqdarahmad/Store-Management",
 },
@@ -146,6 +148,7 @@ export const projects = [
       "A collection of 110 problems solved in C++. It includes 75 problems from the Assiut training sheets covering data types and conditions, loops, arrays, and strings, plus 35 LeetCode problems from the Blind 75 list covering trees, linked lists, dynamic programming, graphs, and sliding window techniques.",
     tech: ["C++", "Data Structures", "Algorithms", "LeetCode"],
     icon: "code",
+    cover: "/projects/leetcode.jpg",
     demo: "",
     github: "https://github.com/aqdarahmad/competitive-programming",
   },
