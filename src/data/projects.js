@@ -25,13 +25,13 @@ export const projects = [
     description:
       "A mobile app and Raspberry Pi camera that spot fabric defects, identify the fabric type and rate its quality, so buyers can check what they are really getting.",
     details:
-      "My senior graduation project, built with a team of three. People buying fabric often cannot tell the material, find defects by eye, or find the same fabric again, and online listings can be misleading. Fabric AI takes a photo from the phone or from a Raspberry Pi 4 camera with a ring light, sends it to a YOLOv8 model hosted on Roboflow, and shows the defect type, the fabric type and a quality score in the app, with reports that can be saved. The model was trained on a custom defect dataset (holes, stains and tears) and reached 85.1% mAP@50, 86.8% precision and 81.7% F1-score. The Flutter app uses Firebase for sign-in and stores every inspection.",
-    tech: ["YOLOv8", "Computer Vision", "Flutter", "Firebase", "Raspberry Pi 4", "Roboflow", "Google Colab"],
+      "My senior graduation project, built with a team of three. People buying fabric often cannot tell the material, find defects by eye, or find the same fabric again, and online listings can be misleading. Fabric AI takes a photo from the phone or from a Raspberry Pi 4 camera with a ring light, sends it to a YOLOv8 model hosted on Roboflow, and shows the defect type, the fabric type and a quality score in the app, with reports that can be saved. The model was trained on a custom defect dataset (holes, stains and tears) and reached 85.1% mAP@50, 86.8% precision and 81.7% F1-score. The Flutter app also runs as a website: a small Node.js server handles sign-in and keeps the AI keys private, and the app keeps a history of every inspection.",
+    tech: ["YOLOv8", "Computer Vision", "Flutter", "Node.js", "Raspberry Pi 4", "Roboflow", "Google Colab"],
     icon: "fabric",
     demo: "https://fabric-ai-py95.onrender.com",
     github: "https://github.com/aqdarahmad/Fabric-AI",
     gallery: [
-      { src: "/fabric/system-design.png", caption: "How a photo becomes a result: app or Raspberry Pi, Roboflow YOLOv8 server, Firebase, results screen" },
+      { src: "/fabric/system-design.png", caption: "How a photo becomes a result: app or Raspberry Pi, Roboflow YOLOv8 server, database, results screen" },
       { src: "/fabric/hardware.png", caption: "The inspection stand: Raspberry Pi 4, camera module and ring light" },
       { src: "/fabric/app-overview.png", caption: "The Fabric AI mobile app" },
       { src: "/fabric/app-login.png", caption: "Sign in and create account" },

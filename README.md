@@ -1,84 +1,107 @@
-# 🎀 Aqdar Ahmad | Personal Portfolio
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Made%20with-♡%20React-ec4899?style=for-the-badge&logo=react&logoColor=white" alt="Made with React" />
-  <img src="https://img.shields.io/badge/Powered%20by-Vite-c084fc?style=for-the-badge&logo=vite&logoColor=white" alt="Powered by Vite" />
+# Aqdar Ahmad · Portfolio
+
+**Computer Systems Engineer** building web applications, APIs and AI-powered tools.
+
+[![Live site](https://img.shields.io/badge/Live%20site-portfolio--kq37.onrender.com-A81B5E?style=for-the-badge)](https://portfolio-kq37.onrender.com)
+
+[![React](https://img.shields.io/badge/React-19-F4A7C0?logo=react&logoColor=white)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-8-C9A227?logo=vite&logoColor=white)](https://vite.dev)
+[![Deployed on Render](https://img.shields.io/badge/Deployed%20on-Render-7A1F3D)](https://render.com)
+
+<img src="docs/hero.jpg" alt="Portfolio hero section" width="900">
+
+</div>
+
+## About
+
+A personal portfolio that presents my work as a software engineer: backend APIs, a computer-vision graduation project, an AI job-matching tool and a full-stack quiz platform. The design is bold and modern, with a pastel pink and gold palette and an editorial serif for headings.
+
+## Preview
+
+| About | Projects |
+|---|---|
+| <img src="docs/about.jpg" alt="About section"> | <img src="docs/projects.jpg" alt="Projects list"> |
+| **Skills** | **Contact** |
+| <img src="docs/skills.jpg" alt="Skills section"> | <img src="docs/contact.jpg" alt="Contact section"> |
+
+### Project details with image gallery
+
+Every project opens in a modal with the full story, tech stack, links and, where available, a gallery of screenshots (the Fabric project includes the system design, hardware, app screens and test cases).
+
+<img src="docs/project-modal.jpg" alt="Project details modal" width="900">
+
+### Dark mode and mobile
+
+<p>
+  <img src="docs/dark.jpg" alt="Dark theme" width="620">
+  <img src="docs/mobile.jpg" alt="Mobile layout" width="190">
 </p>
 
-<p align="center">
-  <i>A little corner of the internet where creativity meets code. ♡</i>
-</p>
+## Features
 
-<p align="center">
-  🌸 <a href="https://portfolio-kq37.onrender.com">Explore My Portfolio</a> 🌸
-</p>
+- Responsive layout that works from phones to wide desktops
+- Light and dark theme with a one-click toggle
+- Project modal with details, tech tags, live demo and GitHub links, plus an image gallery
+- Skills grouped by area (backend, frontend, data and AI, tools)
+- Downloadable CV and direct links to GitHub, LinkedIn and email
+- Accessible markup: labelled controls, keyboard-friendly navigation, readable contrast
 
----
+## Projects shown
 
-## 💗 About My Portfolio
+| Project | What it is | Stack |
+|---|---|---|
+| [Fabric Defect Detection System](https://github.com/aqdarahmad/Fabric-AI) | Graduation project: finds fabric defects, identifies fabric type and rates quality (85.1% mAP@50) | YOLOv8, Flutter, Node.js, Raspberry Pi |
+| [Booking System API](https://github.com/aqdarahmad/booking-system-api) | Booking and tickets API with JWT and roles | ASP.NET Core, EF Core, PostgreSQL |
+| [Store Management API](https://github.com/aqdarahmad/Store-Management) | Products and categories API with role-based access | ASP.NET Core, JWT, Swagger |
+| [GitHub RAG Chatbot](https://github.com/aqdarahmad/github-rag-chatbot) | Chat with any GitHub repository | Python, FastAPI, ChromaDB, Gemini |
+| [Semantic Job Matching Tool](https://github.com/aqdarahmad/semantic-search-tool) | Matches a candidate profile to jobs by meaning | Python, pgvector, Gemini |
+| [QuizLoom](https://github.com/aqdarahmad/Quiz-Loom) | Quiz platform with student and admin dashboards | React, Express, PostgreSQL |
+| [Problem Solving](https://github.com/aqdarahmad/competitive-programming) | Algorithms and data structures practice | C++ |
 
-Welcome to my personal portfolio!
-<img width="1890" height="906" alt="image" src="https://github.com/user-attachments/assets/bf3def0b-8e02-4fb6-8edb-77718563d45e" />
-<img width="1881" height="889" alt="image" src="https://github.com/user-attachments/assets/4e83ca8f-3101-4212-9be8-1ee5c994b620" />
-<img width="1892" height="910" alt="image" src="https://github.com/user-attachments/assets/03f28c89-7185-44c2-818c-9abc0d94daf0" />
-<img width="1897" height="911" alt="image" src="https://github.com/user-attachments/assets/c4fbf6d6-4d92-49c8-a662-39cbac3eef6b" />
-<img width="1896" height="907" alt="image" src="https://github.com/user-attachments/assets/e6121811-7d18-41b0-8908-7f5859a3fddf" />
-<img width="1901" height="914" alt="image" src="https://github.com/user-attachments/assets/e97e431b-3618-4054-972b-42f3167d9c1f" />
-<img width="1915" height="920" alt="image" src="https://github.com/user-attachments/assets/f305e88c-ac3d-49ed-8be3-97b5732adc97" />
-<img width="1919" height="907" alt="image" src="https://github.com/user-attachments/assets/d5c53918-6da6-424f-bc5c-928cd5f25d7c" />
-<img width="1919" height="908" alt="image" src="https://github.com/user-attachments/assets/06dcc6f6-7827-48ab-9167-a5631a4f5f00" />
-<img width="1916" height="909" alt="image" src="https://github.com/user-attachments/assets/e3094ff3-3d04-4e1a-be4e-859adc20a4ca" />
-<img width="1916" height="912" alt="image" src="https://github.com/user-attachments/assets/4ea1f755-b108-4e78-a71e-f31e86b10699" />
+## Tech stack
 
+- **Framework:** React 19 + Vite 8
+- **Styling:** plain CSS with CSS variables (theme tokens, dark mode)
+- **Fonts:** Instrument Serif and Figtree via `@fontsource`
+- **Icons:** lucide-react, react-icons
 
+## Project structure
 
+```
+src/
+  components/   Navbar, Hero, About, Projects, ProjectModal, Skills, Contact, Footer
+  data/         projects.js (projects, gallery images, skill groups)
+  App.css       layout and component styles
+  index.css     theme variables and base styles
+public/         CV, favicon and project images
+docs/           screenshots used in this README
+```
 
+To add or edit a project, change only `src/data/projects.js`. Put images in `public/` and list them in the project's `gallery`.
 
+## Run locally
 
+```bash
+git clone https://github.com/aqdarahmad/portfolio.git
+cd portfolio
+npm install
+npm run dev        # http://localhost:5173
+```
 
+```bash
+npm run build      # production build in dist/
+npm run start      # serve the build on $PORT (used by Render)
+```
 
+## Deploy on Render
 
+- **Build command:** `npm install && npm run build`
+- **Start command:** `npm start`
 
-## 🛠️ My Tech Stack
+A Render **Static Site** (publish directory `dist`) also works and is faster and free of cold starts.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-</p>
+## Contact
 
-## 🎨 Design Philosophy
-
-♡ Soft pink accents and a feminine visual identity.
-
-♡ Clean layouts with readable typography.
-
-♡ A modern interface that keeps the focus on my work.
-
-♡ A balance between creativity, simplicity, and professionalism.
-
-## 🌐 Live Website
-
-Visit my portfolio and explore my work:
-
-**💗 [aqdar-portfolio — Live Demo](https://portfolio-kq37.onrender.com)**
-
-## 💌 Let's Connect
-
-I'm always excited to learn, build, and explore new opportunities in technology.
-
-<p align="center">
-  <a href="https://github.com/aqdarahmad">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-</p>
-
----
-
-<p align="center">
-  Made with ♡, a little pink, and lots of passion.
-  <br/>
-  <b>© Aqdar Ahmad</b> 🌷
-</p>
+[LinkedIn](https://www.linkedin.com/in/aqdar-ahmad-b30832421) · [GitHub](https://github.com/aqdarahmad)
