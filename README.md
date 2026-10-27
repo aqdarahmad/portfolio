@@ -16,7 +16,7 @@
 
 ## About
 
-A personal portfolio that presents my work as a software engineer: backend APIs, a computer-vision graduation project, an AI job-matching tool and a full-stack quiz platform. The design is bold and modern, with a pastel pink and gold palette and an editorial serif for headings.
+A personal portfolio that presents my work as a software engineer: backend APIs, a computer-vision graduation project, an AI job-matching tool and a full-stack quiz platform. It also lists my certificates and achievements, such as IEEEXtreme 19.0, the MERN stack program and a Front End Nanodegree. The design is bold and modern, with a pastel pink and gold palette and an editorial serif for headings.
 
 ## Preview
 
@@ -45,6 +45,7 @@ Every project opens in a modal with the full story, tech stack, links and, where
 - Light and dark theme with a one-click toggle
 - Project modal with details, tech tags, live demo and GitHub links, plus an image gallery
 - Skills grouped by area (backend, frontend, data and AI, tools)
+- Certificates and achievements section: cards that open a large preview with details, a PDF download and, where available, an online verification link
 - Downloadable CV and direct links to GitHub, LinkedIn and email
 - Accessible markup: labelled controls, keyboard-friendly navigation, readable contrast
 
@@ -72,15 +73,20 @@ Every project opens in a modal with the full story, tech stack, links and, where
 
 ```
 src/
-  components/   Navbar, Hero, About, Projects, ProjectModal, Skills, Contact, Footer
+  components/   Navbar, Hero, About, Projects, ProjectModal, Skills,
+                Certificates, CertificateModal, Contact, Footer
   data/         projects.js (projects, gallery images, skill groups)
+                certificates.js (achievements and certificates)
   App.css       layout and component styles
   index.css     theme variables and base styles
-public/         CV, favicon and project images
+public/         CV, favicon, project images and certificate previews
+  certificates/ one preview image per certificate (plus PDFs where available)
 docs/           screenshots used in this README
 ```
 
 To add or edit a project, change only `src/data/projects.js`. Put images in `public/` and list them in the project's `gallery`.
+
+To add a certificate or achievement, add an entry to `src/data/certificates.js` (newest first) and put its preview image in `public/certificates/`. Optional fields: `pdf` for a download button, `verify` for an online verification link, `credential` for a certificate number and `chips` for short highlights such as the number of hours.
 
 ## Run locally
 
