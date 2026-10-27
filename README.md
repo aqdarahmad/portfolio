@@ -32,6 +32,15 @@ Every project opens in a modal with the full story, tech stack, links and, where
 
 <img src="docs/project-modal.jpg" alt="Project details modal" width="900">
 
+### Certificates and achievements
+
+The certificates section shows each certificate as a card. Clicking a card opens a larger preview with the details, a PDF download and, where available, an online verification link.
+
+| | | | |
+|---|---|---|---|
+| <img src="public/certificates/ieeextreme-19.jpg" alt="IEEEXtreme 19.0 certificate" width="220"><br>**IEEEXtreme 19.0** | <img src="public/certificates/front-end-essentials.jpg" alt="Front End Development Essentials certificate" width="220"><br>**Front End Development Essentials** | <img src="public/certificates/mern-stack.jpg" alt="Full Stack MERN certificate" width="220"><br>**Full Stack MERN** | <img src="public/certificates/orion-vlsi-internship.jpg" alt="Orion VLSI internship certificate" width="220"><br>**Design Verification Internship** |
+| <img src="public/certificates/react-front-end.jpg" alt="Front-End Development with React certificate" width="220"><br>**Front-End with React** | <img src="public/certificates/efe-finding-a-job.jpg" alt="Education For Employment certificate" width="220"><br>**Finding a Job Is a Job** | <img src="public/certificates/problem-solving.jpg" alt="Problem-Solving training certificate" width="220"><br>**Problem-Solving Training** | <img src="public/certificates/php.jpg" alt="PHP certificate" width="220"><br>**PHP** |
+
 ### Dark mode and mobile
 
 <p>
