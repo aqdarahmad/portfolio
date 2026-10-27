@@ -11,6 +11,7 @@ export default function Navbar({ darkMode, onToggleTheme }) {
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a className="nav-extra" href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
       </nav>
 
