@@ -55,6 +55,7 @@ The certificates section shows each certificate as a card. Clicking a card opens
 - Project modal with details, tech tags, live demo and GitHub links, plus an image gallery
 - Skills grouped by area (backend, frontend, data and AI, tools)
 - Certificates and achievements section: cards that open a large preview with details, a PDF download and, where available, an online verification link
+- AI chatbot (Gemini) that answers visitors' questions about my projects, skills and certificates, in English or Arabic
 - Downloadable CV and direct links to GitHub, LinkedIn and email
 - Accessible markup: labelled controls, keyboard-friendly navigation, readable contrast
 
@@ -77,6 +78,8 @@ The certificates section shows each certificate as a card. Clicking a card opens
 - **Styling:** plain CSS with CSS variables (theme tokens, dark mode)
 - **Fonts:** Instrument Serif and Figtree via `@fontsource`
 - **Icons:** lucide-react, react-icons
+- **Server:** a small Express server serves the built site and the `/api/chat` endpoint
+- **Chatbot:** Google Gemini API, called only from the server so the key stays private
 
 ## Project structure
 
@@ -88,6 +91,10 @@ src/
                 certificates.js (achievements and certificates)
   App.css       layout and component styles
   index.css     theme variables and base styles
+  components/Chatbot.jsx   floating chat widget (styles in Chatbot.css)
+server/
+  index.js      Express server: serves dist/ and POST /api/chat (validation, rate limit)
+  profile.js    builds the chatbot's system prompt from src/data, so it always matches the site
 public/         CV, favicon, project images and certificate previews
   certificates/ one preview image per certificate (plus PDFs where available)
 docs/           screenshots used in this README
@@ -108,15 +115,30 @@ npm run dev        # http://localhost:5173
 
 ```bash
 npm run build      # production build in dist/
-npm run start      # serve the build on $PORT (used by Render)
+npm run start      # Express server: site + chat API on $PORT (used by Render)
 ```
+
+### Chatbot setup
+
+1. Create a free API key at [Google AI Studio](https://aistudio.google.com/apikey).
+2. Export it as an environment variable when you run the server (`.env.example` shows the name; `.env` files are git-ignored).
+3. Run the API and the site together:
+
+```bash
+export GEMINI_API_KEY=your-key
+npm run build && npm start     # http://localhost:4173
+```
+
+For development with hot reload, run `npm run dev:api` in one terminal and `npm run dev` in another (Vite proxies `/api` to the server).
+
+The bot only answers from the data in `src/data/` plus a short bio in `server/profile.js`. Edit those files to change what it knows. Set `GEMINI_MODEL` to use a different Gemini model (default `gemini-3.8-flash`). Without `GEMINI_API_KEY` the site still works and the chat shows a friendly "not available" message.
 
 ## Deploy on Render
 
+- **Service type:** Web Service (the chatbot needs the Node server, so a Static Site will not work)
 - **Build command:** `npm install && npm run build`
 - **Start command:** `npm start`
-
-A Render **Static Site** (publish directory `dist`) also works and is faster and free of cold starts.
+- **Environment variable:** `GEMINI_API_KEY` (set it in the Render dashboard, never in the code)
 
 ## Contact
 
