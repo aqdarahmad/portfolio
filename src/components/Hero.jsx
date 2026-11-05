@@ -1,6 +1,6 @@
 import { ArrowDownRight, Mail } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
-import portrait from "../assets/aqdar.jpg";
+import portrait from "../assets/aqdar.png";
 
 export default function Hero() {
   return (
