@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Chatbot from "./components/Chatbot";
 import ProjectModal from "./components/ProjectModal";
 import CertificateModal from "./components/CertificateModal";
 import { projects, skillGroups } from "./data/projects";
@@ -34,6 +35,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <Chatbot />
       {selectedProject && (
         <ProjectModal
           project={selectedProject}
