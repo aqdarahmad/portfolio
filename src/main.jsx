@@ -1,8 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import '@fontsource/instrument-serif/400.css'
-import '@fontsource/instrument-serif/400-italic.css'
-import '@fontsource-variable/figtree'
+import '@fontsource-variable/bodoni-moda/opsz.css'
+import '@fontsource-variable/bodoni-moda/opsz-italic.css'
+import '@fontsource-variable/hanken-grotesk'
 import './index.css'
 import App from './App.jsx'
 

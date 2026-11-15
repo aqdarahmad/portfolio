@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ThreadField from "./components/ThreadField";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -14,13 +15,31 @@ import { achievements, certificates } from "./data/certificates";
 import "./App.css";
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  // dark is the default; index.html has already applied the saved choice
+  const [darkMode, setDarkMode] = useState(
+    () => document.documentElement.dataset.theme !== "light",
+  );
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedCertificate, setSelectedCertificate] = useState(null);
 
+  useEffect(() => {
+    document.documentElement.dataset.theme = darkMode ? "dark" : "light";
+  }, [darkMode]);
+
+  const toggleTheme = () => {
+    const next = !darkMode;
+    setDarkMode(next);
+    try {
+      localStorage.setItem("theme", next ? "dark" : "light");
+    } catch {
+      // storage can be blocked; the choice then lasts for this visit only
+    }
+  };
+
   return (
     <div className={`portfolio ${darkMode ? "dark-mode" : ""}`}>
-      <Navbar darkMode={darkMode} onToggleTheme={() => setDarkMode((prev) => !prev)} />
+      <ThreadField dark={darkMode} />
+      <Navbar darkMode={darkMode} onToggleTheme={toggleTheme} />
       <main>
         <Hero />
         <About />
