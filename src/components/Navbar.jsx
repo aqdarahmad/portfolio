@@ -9,6 +9,7 @@ export default function Navbar({ darkMode, onToggleTheme }) {
 
       <nav aria-label="Main">
         <a href="#about">About</a>
+        <a className="nav-minor" href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a className="nav-minor" href="#skills">Skills</a>
         <a className="nav-extra" href="#certificates">Certificates</a>
