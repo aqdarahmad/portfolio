@@ -26,6 +26,12 @@ A personal portfolio that presents my work as a software engineer: backend APIs,
 | **Skills** | **Contact** |
 | <img src="docs/skills.jpg" alt="Skills section"> | <img src="docs/contact.jpg" alt="Contact section"> |
 
+### Experience
+
+A timeline of three internships (Orion VLSI Technologies, Gaza Sky Geeks, Palestine Tech Hub). Each entry lists what was done, the skills used, and opens its certificate or related project in a modal.
+
+<img src="docs/experience.jpg" alt="Experience timeline" width="900">
+
 ### Project details with image gallery
 
 Every project opens in a modal with the full story, tech stack, links and, where available, a gallery of screenshots (the Fabric project includes the system design, hardware, app screens and test cases).

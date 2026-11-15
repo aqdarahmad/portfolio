@@ -116,6 +116,7 @@
 
 /* Every section begins with a link between two points. */
 .about,
+.experience,
 .projects,
 .skills,
 .certificates,
@@ -126,6 +127,7 @@
   padding: clamp(64px, 7.5vw, 108px) var(--gutter);
 }
 .about::before,
+.experience::before,
 .projects::before,
 .skills::before,
 .certificates::before,
@@ -142,6 +144,7 @@
 }
 
 /* Sections with a title rail on the left and the content on the right. */
+.experience,
 .projects,
 .skills,
 .certificates {
@@ -150,6 +153,7 @@
   column-gap: clamp(28px, 5vw, 72px);
   align-items: start;
 }
+.experience > .section-title,
 .projects > .section-title,
 .skills > .section-title,
 .certificates > .section-title {
@@ -158,6 +162,7 @@
   top: 112px;
 }
 .certificates > .section-title { grid-row: 2 / span 2; }
+.experience-list,
 .project-list,
 .skill-groups,
 .cert-group { grid-column: 2; }
@@ -451,13 +456,16 @@
 /* Lists of technologies, each marked with a small four-point star. */
 .project-tags,
 .skill-group ul,
+.experience-skills,
 .tech-tags { display: flex; flex-wrap: wrap; gap: 4px 1.5em; }
 .project-tags { margin-top: 4px; font-size: .92rem; color: var(--ink-soft); }
 .project-tags span,
 .skill-group li,
+.experience-skills li,
 .tech-tags li { white-space: nowrap; }
 .project-tags span::before,
 .skill-group li::before,
+.experience-skills li::before,
 .tech-tags li::before {
   content: "";
   display: inline-block;
@@ -559,6 +567,49 @@
 }
 .cert-card:hover .cert-title { color: var(--accent); }
 .cert-meta { font-size: .95rem; line-height: 1.45; color: var(--ink-soft); }
+
+/* ---------- Experience ---------- */
+.experience-list { list-style: none; }
+.experience-item {
+  position: relative;
+  padding: 0 0 clamp(44px, 5vw, 60px) 38px;
+}
+.experience-item:last-child { padding-bottom: 0; }
+/* each role is a point on a path */
+.experience-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--gold) 24%, transparent);
+}
+.experience-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 34px;
+  bottom: -7px;
+  width: 1px;
+  background: var(--gold-line);
+}
+.experience-role {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -.015em;
+}
+.experience-org { margin: 0 0 4px; font-weight: 600; color: var(--accent); }
+.experience-meta { margin: 0 0 18px; font-size: .95rem; color: var(--ink-soft); }
+.experience-detail { max-width: 62ch; margin: 0 0 10px; line-height: 1.65; color: var(--ink-soft); }
+.experience-skills { margin-top: 16px; font-size: .95rem; color: var(--ink-soft); }
+.experience-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.button-small { padding: 9px 16px; font-size: .92rem; }
 
 /* ---------- Contact ---------- */
 .contact { text-align: center; padding-bottom: clamp(88px, 11vw, 150px); }
@@ -671,15 +722,21 @@
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1180px) {
+  .experience,
   .projects,
   .skills,
   .certificates { display: block; }
+  .experience > .section-title,
   .projects > .section-title,
   .skills > .section-title,
   .certificates > .section-title {
     position: static;
     margin-bottom: 36px;
   }
+}
+
+@media (max-width: 1000px) {
+  .navbar nav .nav-extra { display: none; }
 }
 
 @media (max-width: 960px) {
@@ -699,7 +756,6 @@
   .hero-side { grid-column: 1; grid-row: 3; padding-top: 0; }
   .project-card { grid-template-columns: minmax(0, 1fr); gap: 26px; padding: 36px 0; }
   .skill-group { grid-template-columns: minmax(0, 1fr); gap: 12px; }
-  .navbar nav .nav-extra { display: none; }
 }
 
 @media (max-width: 560px) {
