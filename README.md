@@ -16,7 +16,7 @@
 
 ## About
 
-A personal portfolio that presents my work as a software engineer: backend APIs, a computer-vision graduation project, an AI job-matching tool and a full-stack quiz platform. It also lists my certificates and achievements, such as IEEEXtreme 19.0, the MERN stack program and a Front End Nanodegree. The design is bold and modern, with a pastel pink and gold palette and an editorial serif for headings.
+A personal portfolio that presents my work as a software engineer: backend APIs, a computer-vision graduation project, an AI job-matching tool and a full-stack quiz platform. It also lists my certificates and achievements, such as IEEEXtreme 19.0, the MERN stack program and a Front End Nanodegree. The design centres on a living background: a satin silk fabric drawn in WebGL that sways slowly and catches the light as you move the cursor. Running-stitch dashes divide the sections, a deep mulberry and gold palette carries the mood, and Bodoni Moda sets the headings.
 
 ## Preview
 
@@ -41,17 +41,19 @@ The certificates section shows each certificate as a card. Clicking a card opens
 | <img src="public/certificates/ieeextreme-19.jpg" alt="IEEEXtreme 19.0 certificate" width="220"><br>**IEEEXtreme 19.0** | <img src="public/certificates/front-end-essentials.jpg" alt="Front End Development Essentials certificate" width="220"><br>**Front End Development Essentials** | <img src="public/certificates/mern-stack.jpg" alt="Full Stack MERN certificate" width="220"><br>**Full Stack MERN** | <img src="public/certificates/orion-vlsi-internship.jpg" alt="Orion VLSI internship certificate" width="220"><br>**Design Verification Internship** |
 | <img src="public/certificates/react-front-end.jpg" alt="Front-End Development with React certificate" width="220"><br>**Front-End with React** | <img src="public/certificates/efe-finding-a-job.jpg" alt="Education For Employment certificate" width="220"><br>**Finding a Job Is a Job** | <img src="public/certificates/problem-solving.jpg" alt="Problem-Solving training certificate" width="220"><br>**Problem-Solving Training** | <img src="public/certificates/php.jpg" alt="PHP certificate" width="220"><br>**PHP** |
 
-### Dark mode and mobile
+### Light theme and mobile
 
 <p>
-  <img src="docs/dark.jpg" alt="Dark theme" width="620">
+  <img src="docs/light.jpg" alt="Light theme" width="620">
   <img src="docs/mobile.jpg" alt="Mobile layout" width="190">
 </p>
 
 ## Features
 
 - Responsive layout that works from phones to wide desktops
-- Light and dark theme with a one-click toggle
+- Living background: a WebGL satin-weave shader with a drifting light that follows the pointer, calmer once you scroll into the content
+- Dark theme by default with a one-click light theme; the choice is remembered
+- Respects reduced-motion settings (the background becomes a single still frame) and lowers its resolution on slower devices
 - Project modal with details, tech tags, live demo and GitHub links, plus an image gallery
 - Skills grouped by area (backend, frontend, data and AI, tools)
 - Certificates and achievements section: cards that open a large preview with details, a PDF download and, where available, an online verification link
@@ -75,7 +77,8 @@ The certificates section shows each certificate as a card. Clicking a card opens
 
 - **Framework:** React 19 + Vite 8
 - **Styling:** plain CSS with CSS variables (theme tokens, dark mode)
-- **Fonts:** Instrument Serif and Figtree via `@fontsource`
+- **Background:** a hand-written WebGL fragment shader (`src/components/ThreadField.jsx`), no extra library
+- **Fonts:** Bodoni Moda and Hanken Grotesk via `@fontsource-variable`
 - **Icons:** lucide-react, react-icons
 
 ## Project structure
