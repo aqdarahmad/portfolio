@@ -2,8 +2,8 @@
   --font-display: "Bodoni Moda Variable", "Bodoni 72", Didot, "Times New Roman", serif;
   --font-body: "Hanken Grotesk Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  --page-bg: #1f0a1a;
-  color-scheme: dark;
+  --page-bg: #fff0f5;
+  color-scheme: light;
 
   font-family: var(--font-body);
   font-synthesis: none;
@@ -12,9 +12,9 @@
   scroll-behavior: smooth;
 }
 
-:root[data-theme="light"] {
-  --page-bg: #fceef3;
-  color-scheme: light;
+:root[data-theme="dark"] {
+  --page-bg: #2a0b20;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -32,11 +32,11 @@ img { max-width: 100%; display: block; }
 ul, dl, dd { margin: 0; padding: 0; list-style: none; }
 
 a:focus-visible, button:focus-visible {
-  outline: 2px solid var(--gold, #e4b85c);
+  outline: 2px solid var(--gold, #c9962b);
   outline-offset: 3px;
 }
 
-::selection { background: #e4b85c; color: #2a0c22; }
+::selection { background: #f2d58a; color: #3a1030; }
 
 @media (prefers-reduced-motion: reduce) {
   :root { scroll-behavior: auto; }

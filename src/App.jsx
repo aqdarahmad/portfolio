@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ThreadField from "./components/ThreadField";
+import Constellation from "./components/Constellation";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -15,9 +15,9 @@ import { achievements, certificates } from "./data/certificates";
 import "./App.css";
 
 export default function App() {
-  // dark is the default; index.html has already applied the saved choice
+  // light is the default; index.html has already applied the saved choice
   const [darkMode, setDarkMode] = useState(
-    () => document.documentElement.dataset.theme !== "light",
+    () => document.documentElement.dataset.theme === "dark",
   );
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedCertificate, setSelectedCertificate] = useState(null);
@@ -38,7 +38,7 @@ export default function App() {
 
   return (
     <div className={`portfolio ${darkMode ? "dark-mode" : ""}`}>
-      <ThreadField dark={darkMode} />
+      <Constellation dark={darkMode} />
       <Navbar darkMode={darkMode} onToggleTheme={toggleTheme} />
       <main>
         <Hero />
